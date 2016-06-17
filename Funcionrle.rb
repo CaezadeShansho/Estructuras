@@ -1,18 +1,4 @@
-class Node
-	attr_accessor :next_node, :value
-	def initialize(value, next_node)
-		@value = value
-		@next_node = next_node
-	end
-end
-class NodeRLE
-	attr_accessor :next_node, :value, :counter
-	def initialize(value, counter, next_node)
-		@value = value
-		@next_node = next_node
-		@counter = counter
-	end
-end	
+
 def rle(node)
 	aux=node
 	cont=0
@@ -39,12 +25,3 @@ def rle(node)
 	end	
 	return head
 end	
-a=Node.new(1,nil)
-b=Node.new(1,a)
-c=Node.new(3,b)
-d=Node.new(4,c)
-e=Node.new(1,d)
-er=rle(e)
-puts er.value
-puts er.counter
-puts er.next_node
